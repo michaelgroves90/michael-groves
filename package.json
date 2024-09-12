@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write .",
-    "lint": "next lint",
-    "export": "npm run build && next export"
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "Michael Groves",
