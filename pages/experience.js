@@ -23,16 +23,18 @@ const Experience = () => (
         <br></br>
         I currently work as an Engineer for Capgemini on HMRC projects. Some of my achievements and responsibilities include:        <br></br>
         <br></br>
-        Building well tested microservices using Java, Spring Boot and Hibernate.<br></br>
-        Used OpenApi to deliver RESTful APIs.<br></br>
-        Persued and encouraged TDD with every project and within every team.<br></br>
-        Defined and refined package structures for the individual microservices. <br></br>
-        Refactored code and made improvements continuously where necessary.<br></br>
-        Built and maintained a Gitlab CI/CD pipeline with multiple stages.<br></br>
-        Given sole ownership on a new project developing a microservice from end to end using all of the tools and knowledge I acquired.<br></br>
-        Supported the projects through a full software development lifecycle.<br></br>
-        Worked with agile methodologies within my team.<br></br>
-        Acted as mentor to Junior Developers on various projects.<br></br>
+        • Building well tested microservices in both Java and Scala<br></br>
+        • Used OpenApi to deliver RESTful APIs.<br></br>
+        • Monitored and debugged vital government infrastructure outside of working hours.<br></br>
+        • Helped design and build a complete redesign of said government infrastructure to improve it's
+        efficiency, maintainability, and affordability<br></br>
+        • Persued and encouraged TDD with every project and within every team.<br></br>
+        • Defined and refined package structures for the individual microservices. <br></br>
+        • Refactored code and made improvements continuously where necessary.<br></br>
+        • Built and maintained a Gitlab and Jenkins CI/CD pipeline with multiple stages.<br></br>
+        • Supported the projects through a full software development lifecycle.<br></br>
+        • Worked with agile methodologies within my team.<br></br>
+        • Acted as mentor to Junior Developers on various projects.<br></br>
         </Paragraph>
         <br></br>
         <Heading as="h3" variant="section-title">
@@ -76,7 +78,7 @@ const Experience = () => (
           • The M-Theory<br></br>
           • Final Empire<br></br>
         </Paragraph>
-          <br></br><br></br>
+          <br></br>
         <BioSection>
           <BioYear>2010 - 2017</BioYear>
           Audio Engineer and Session Musician

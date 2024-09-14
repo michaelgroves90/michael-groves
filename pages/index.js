@@ -121,7 +121,7 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
-          Cinema, Music, Markets, Languages, Playing Piano and Guitar,{' '}
+          Cinema, Music, Markets, Languages, Songwriting, Playing Piano and Guitar,{' '}
           <Link href="https://500px.com/p/craftzdog" target="_blank">
             History
           </Link>
