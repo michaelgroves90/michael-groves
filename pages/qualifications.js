@@ -1,8 +1,7 @@
-import { Container, Heading, Box } from '@chakra-ui/react'
+import { Container, Heading } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { BioSection, BioYear } from '../components/bio'
-import Image from 'next/image'
 
 const Qualifications = () => (
   <Layout title="Wallpaper Packs">
