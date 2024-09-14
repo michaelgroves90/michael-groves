@@ -6,7 +6,7 @@ import { BioSection, BioYear } from '../components/bio'
 
 const Experience = () => (
   <Layout title="Experience">
-    <Container>
+    <Container maxW="container.md">
       <Heading as="h3" fontSize={20} mb={4}>
         Experience
       </Heading>

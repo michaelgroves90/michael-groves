@@ -23,7 +23,13 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="700" pt={20}>
+      <Container 
+        maxW="full" 
+        pt={20}
+        // wrap="wrap"
+        align="center"
+        // w="100%"
+      >
 
         {children}
 

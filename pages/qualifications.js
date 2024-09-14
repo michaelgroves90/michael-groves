@@ -5,7 +5,7 @@ import { BioSection, BioYear } from '../components/bio'
 
 const Qualifications = () => (
   <Layout title="Wallpaper Packs">
-    <Container>
+    <Container maxW="container.md">
       <Heading as="h3" fontSize={20} mb={4}>
         Qualifications
       </Heading>

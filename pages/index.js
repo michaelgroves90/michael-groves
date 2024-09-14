@@ -15,7 +15,7 @@ import Image from 'next/image'
 
 const Home = () => (
   <Layout>
-    <Container>
+    <Container maxW="container.md">
       <Box
         borderRadius="lg"
         mb={6}
