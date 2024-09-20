@@ -46,7 +46,7 @@ const Qualifications = () => (
         <BioYear>2010 - 2013</BioYear>
           University of Sussex - Brighton
       </BioSection>
-          Music - 2.2
+          Bachelor of Arts with Honors in Music - 2.2
       <br></br>
       <br></br>
       </Section>

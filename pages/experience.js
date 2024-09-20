@@ -19,9 +19,10 @@ const Experience = () => (
           <BioYear>2021 - Present Year</BioYear>
           Capgemini SE - Brighton, England
         </BioSection>
+          Software Engineer
         <Paragraph>
         <br></br>
-        I currently work as an Engineer for Capgemini on HMRC projects. Some of my achievements and responsibilities include:        <br></br>
+        I currently work as an Application and Systems Engineer for Capgemini on HMRC projects. Some of my achievements and responsibilities include:        <br></br>
         <br></br>
         • Building well tested microservices in both Java and Scala<br></br>
         • Used OpenApi to deliver RESTful APIs.<br></br>
