@@ -121,10 +121,11 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
-          Cinema, Music, Markets, Languages, Songwriting, Playing Piano and Guitar,{' '}
+          Cinema, Music,{' '}
           <Link href="https://500px.com/p/craftzdog" target="_blank">
-            History
+            Photography
           </Link>
+          ,{' '}Markets, Languages, Songwriting, Playing Piano and Guitar
       </Section>
 
       <Section delay={0.3}>
