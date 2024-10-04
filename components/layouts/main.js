@@ -12,7 +12,6 @@ const Main = ({ children, router }) => {
         <meta name="description" content="Michael's homepage" />
         <meta name="author" content="Michael Groves" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="twitter:title" content="Michael Groves" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:site_name" content="Michael Groves" />

@@ -65,7 +65,7 @@ const Home = () => (
         With 3 years of experience as a software engineer, 
         Michael has had the opportunity to develop his skills in both Object-Oriented and 
         Functional programming, working on diverse projects that have strengthened his 
-        passion for building innovative and efficient solutions.<br></br>
+        passion for building innovative and efficient solutions.<br></br><br></br>
         Before transitioning into tech, 
         Michael spent over a decade in the music industry as a professional songwriter and 
         touring musician, collaborating with various artists and honing his creative 
@@ -74,13 +74,12 @@ const Home = () => (
         Michael's journey from music to software engineering has been driven by a love 
         for continuous learning and a desire to challenge himself. Recently, 
         he has also embraced learning Japanese, a language he has been studying for 
-        over a year. <br></br>
-        He is now excited to take the next step in his career by seeking an 
+        over a year. He is now excited to take the next step in his career by seeking an 
         opportunity in Japan, where he can bring his skills, passion, 
         and adaptability to a new and vibrant environment.
         <br></br><br></br>
 
-        I look forward to connecting with those who share my enthusiasm for technology and creativity.{' '}
+        Michael looks forward to connecting with those who share his enthusiasm for technology and creativity.{' '}
         </Paragraph>
         <Box align="center" my={4}>
         <Link href="https://github.com/michaelgroves90" target="_blank">
@@ -132,12 +131,12 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Skills
         </Heading>
-        Agile Processes · Test Driven Development · 
-        CI/CD Pipeline and DevOps
-        Project Planning: user stories, database structure and relationships, mock-ups
-        Team Processes: pairing, mobbing, retros, check-ins. 
+        Agile Processes · Test Driven Development <br></br>
+        CI/CD Pipeline and DevOps <br></br>
+        Project Planning: user stories, database structure and relationships, mock-ups <br></br>
+        Team Processes: pairing, mobbing, retros, check-ins <br></br>
         Solid commitment to industry-standard best practices ensuring clean, 
-        efficient, readable code (Single Responsibility, DRY).
+        efficient, readable code <br></br> (Single Responsibility, DRY) <br></br>
         Domain Modelling
       </Section>
 
