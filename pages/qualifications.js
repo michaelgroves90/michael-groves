@@ -10,10 +10,6 @@ const Qualifications = () => (
         Qualifications
       </Heading>
       <br></br>
-      <br></br>
-      <Heading as="h3" variant="section-title">
-          Completed
-      </Heading>
       <Section>
         <BioSection>
           <BioYear>2024</BioYear>
@@ -25,6 +21,7 @@ const Qualifications = () => (
           Makers Academy - London, England
         </BioSection>
         Software Engineering
+        <br></br>
         <br></br>
         <BioSection>
           <BioYear>2024</BioYear>
