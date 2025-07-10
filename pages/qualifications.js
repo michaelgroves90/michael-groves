@@ -9,16 +9,8 @@ const Qualifications = () => (
       <Heading as="h3" fontSize={20} mb={4}>
         Qualifications
       </Heading>
-      <Heading as="h3" variant="section-title">
-          In Progress
-      </Heading>
-      <BioSection>
-        <BioYear>2024</BioYear>
-          Japanese Language Proficiency Test - N4
-      </BioSection>
-        Examination in December 2024
-        <br></br>
-        <br></br>
+      <br></br>
+      <br></br>
       <Heading as="h3" variant="section-title">
           Completed
       </Heading>
@@ -33,6 +25,11 @@ const Qualifications = () => (
           Makers Academy - London, England
         </BioSection>
         Software Engineering
+        <br></br>
+        <BioSection>
+          <BioYear>2024</BioYear>
+          Japanese Language Proficiency Test - N4
+        </BioSection>
         <br></br>
         <br></br>
       <BioSection>
