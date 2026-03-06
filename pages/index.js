@@ -62,7 +62,7 @@ const Home = () => (
 
       <Section delay={0.1}>
         <Paragraph>
-        With 3 years of experience as a software engineer, 
+        With over 4 years of experience as a software engineer, 
         Michael has had the opportunity to develop his skills in both Object-Oriented and 
         Functional programming, working on diverse projects that have strengthened his 
         passion for building innovative and efficient solutions.<br></br><br></br>

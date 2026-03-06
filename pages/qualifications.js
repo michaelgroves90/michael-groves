@@ -28,7 +28,6 @@ const Qualifications = () => (
           Japanese Language Proficiency Test - N4
         </BioSection>
         <br></br>
-        <br></br>
       <BioSection>
         <BioYear>2019</BioYear>
           Chartered Insurance Institute - London
