@@ -1,11 +1,10 @@
-import { Box } from '@chakra-ui/react'
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <Box align="center" opacity={0.4} fontSize="sm">
-      &copy; {new Date().getFullYear()}
-    </Box>
+    <footer className="footer">
+      <span>© {new Date().getFullYear()} Michael Groves</span>
+      <span>
+        England <span className="accent">→</span> Japan
+      </span>
+    </footer>
   )
 }
-
-export default Footer

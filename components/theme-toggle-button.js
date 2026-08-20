@@ -1,29 +1,30 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import { useEffect, useState } from 'react'
 
-const ThemeToggleButton = () => {
-  const { toggleColorMode } = useColorMode()
+const STORAGE_KEY = 'mg-theme'
+
+export default function ThemeToggleButton() {
+  const [theme, setTheme] = useState('light')
+
+  useEffect(() => {
+    setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light')
+  }, [])
+
+  const toggle = () => {
+    const next = theme === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+    document.documentElement.setAttribute('data-theme', next)
+    window.localStorage.setItem(STORAGE_KEY, next)
+  }
 
   return (
-    <AnimatePresence mode='wait' initial={false}>
-      <motion.div
-        style={{ display: 'inline-block' }}
-        key={useColorModeValue('light', 'dark')}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
-      >
-        <IconButton
-          aria-label="Toggle theme"
-          colorScheme={useColorModeValue('purple', 'orange')}
-          icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
-          onClick={toggleColorMode}
-        ></IconButton>
-      </motion.div>
-    </AnimatePresence>
+    <button
+      className="theme-toggle"
+      type="button"
+      aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+      title={theme === 'dark' ? 'Light' : 'Dark'}
+      onClick={toggle}
+    >
+      {theme === 'dark' ? '明' : '暗'}
+    </button>
   )
 }
-
-export default ThemeToggleButton

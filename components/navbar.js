@@ -1,118 +1,47 @@
-import { forwardRef } from 'react'
-import Logo from './logo'
+import { useState } from 'react'
 import NextLink from 'next/link'
-import {
-  Container,
-  Box,
-  Link,
-  Stack,
-  Heading,
-  Flex,
-  Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
-  IconButton,
-  useColorModeValue
-} from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub } from 'react-icons/io5'
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
-  return (
-    <Link
-      as={NextLink}
-      href={href}
-      scroll={false}
-      p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
-      target={target}
-      {...props}
-    >
-      {children}
-    </Link>
-  )
-}
+const links = [
+  { href: '/#work', label: 'Work' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/qualifications', label: 'Qualifications' }
+]
 
-const MenuLink = forwardRef((props, ref) => (
-  <Link ref={ref} as={NextLink} {...props} />
-))
-
-const Navbar = props => {
-  const { path } = props
+export default function Navbar({ path }) {
+  const [open, setOpen] = useState(false)
 
   return (
-    <Box
-      position="fixed"
-      as="nav"
-      w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={2}
-      {...props}
-    >
-      <Container
-        display="flex"
-        p={2}
-        maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
-      >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
-          </Heading>
-        </Flex>
-
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+    <header className={open ? 'nav open' : 'nav'}>
+      <NextLink href="/" className="nav-mark" scroll={false}>
+        Michael Groves
+      </NextLink>
+      <nav className="nav-links" aria-label="Primary">
+        {links.map(link => (
+          <NextLink
+            key={link.href}
+            href={link.href}
+            className={path === link.href ? 'active' : undefined}
+            onClick={() => setOpen(false)}
+          >
+            {link.label}
+          </NextLink>
+        ))}
+        <a href="https://github.com/michaelgroves90" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      </nav>
+      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <button
+          className="menu-button"
+          type="button"
+          aria-expanded={open}
+          onClick={() => setOpen(value => !value)}
         >
-          <LinkItem href="/experience" path={path}>
-            Experience
-          </LinkItem>
-          <LinkItem href="/qualifications" path={path}>
-            Qualifications
-          </LinkItem>
-        </Stack>
-
-        <Box flex={1} align="right">
-          <ThemeToggleButton />
-
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <MenuItem as={MenuLink} href="/">
-                  About
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/experience">
-                  Experience
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/qualifications">
-                  Qualifications
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Box>
-        </Box>
-      </Container>
-    </Box>
+          Menu
+        </button>
+        <ThemeToggleButton />
+      </div>
+    </header>
   )
 }
-
-export default Navbar

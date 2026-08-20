@@ -1,51 +1,32 @@
-import { Container, Heading } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { BioSection, BioYear } from '../components/bio'
+import Image from 'next/image'
+import { qualifications } from '../lib/content'
 
 const Qualifications = () => (
-  <Layout title="Wallpaper Packs">
-    <Container maxW="container.md">
-      <Heading as="h3" fontSize={20} mb={4}>
-        Qualifications
-      </Heading>
-      <br></br>
-      <Section>
-        <BioSection>
-          <BioYear>2024</BioYear>
-          Certified Kubernetes Application Developer
-        </BioSection>
-        <br></br>
-        <BioSection>
-          <BioYear>2020</BioYear>
-          Makers Academy - London, England
-        </BioSection>
-        Software Engineering
-        <br></br>
-        <br></br>
-        <BioSection>
-          <BioYear>2024</BioYear>
-          Japanese Language Proficiency Test - N4
-        </BioSection>
-        <br></br>
-      <BioSection>
-        <BioYear>2019</BioYear>
-          Chartered Insurance Institute - London
-      </BioSection>
-          UK Financial Services, Regulation and Ethics - (93%)
-      <br></br>
-      <br></br>
-      <BioSection>
-        <BioYear>2010 - 2013</BioYear>
-          University of Sussex - Brighton
-      </BioSection>
-          Bachelor of Arts with Honors in Music - 2.2
-      <br></br>
-      <br></br>
-      </Section>
-    </Container>
+  <Layout title="Qualifications">
+    <p className="kicker">
+      Paperwork <span className="jp">資格</span>
+    </p>
+    <h1 className="page-title">
+      Qualifications<em className="dot" aria-hidden="true">.</em>
+    </h1>
+    <div>
+      {qualifications.map(item => (
+        <article className="qual" key={`${item.year}-${item.title}`}>
+          <time>{item.year}</time>
+          <strong>{item.title}</strong>
+          <span className="qual-detail">{item.detail}</span>
+        </article>
+      ))}
+    </div>
+    <div className="badge-row">
+      <Image src="/images/ckad.png" alt="CKAD certification badge" width={80} height={80} />
+      <p>
+        Certified Kubernetes Application Developer, clusters as an instrument, not a
+        mystery.
+      </p>
+    </div>
   </Layout>
 )
 
 export default Qualifications
-export { getServerSideProps } from '../components/chakra'

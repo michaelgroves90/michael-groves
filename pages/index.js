@@ -1,168 +1,128 @@
-import {
-  Link,
-  Container,
-  Heading,
-  Box,
-  Button,
-  useColorModeValue
-} from '@chakra-ui/react'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
+import { projects, skills } from '../lib/content'
+
+const SectionHead = ({ title, index, jp }) => (
+  <div className="section-head">
+    <h2>{title}</h2>
+    <div className="section-rule" />
+    <span className="section-index">
+      {index}
+      <span className="jp">{jp}</span>
+    </span>
+  </div>
+)
 
 const Home = () => (
   <Layout>
-    <Container maxW="container.md">
-      <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
-      >
-        Hello, I&apos;m a Software Engineer based in England!
-      </Box>
-
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Michael Groves
-          </Heading>
-          <p> Engineer </p>
-        </Box>
-        <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          textAlign="center"
-        >
-          <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            w="100px"
-            h="100px"
-            display="inline-block"
-            borderRadius="full"
-            overflow="hidden"
-          >
-            <Image
-              src="/images/michael3.jpg"
-              alt="Profile image"
-              width="100"
-              height="100"
-            />
-          </Box>
-        </Box>
-      </Box>
-
-      <Section delay={0.1}>
-        <Paragraph>
-        With over 4 years of experience as a software engineer, 
-        Michael has had the opportunity to develop his skills in both Object-Oriented and 
-        Functional programming, working on diverse projects that have strengthened his 
-        passion for building innovative and efficient solutions.<br></br><br></br>
-        Before transitioning into tech, 
-        Michael spent over a decade in the music industry as a professional songwriter and 
-        touring musician, collaborating with various artists and honing his creative 
-        problem-solving and teamwork abilities.
-        <br></br><br></br>
-        Michael's journey from music to software engineering has been driven by a love 
-        for continuous learning and a desire to challenge himself. Recently, 
-        he has also embraced learning Japanese, a language he has been studying for 
-        over a year. He is now excited to take the next step in his career by seeking an 
-        opportunity in Japan, where he can bring his skills, passion, 
-        and adaptability to a new and vibrant environment.
-        <br></br><br></br>
-
-        Michael looks forward to connecting with those who share his enthusiasm for technology and creativity.{' '}
-        </Paragraph>
-        <Box align="center" my={4}>
-        <Link href="https://github.com/michaelgroves90" target="_blank">
-          <Button
-            variant="ghost"
-            colorScheme="teal"
-            leftIcon={<IoLogoGithub />}
-          >
-            @michaelgroves90
-          </Button>
-        </Link>
-        </Box>
-      </Section>
-
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>1990</BioYear>
-          Born in London, England.
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Began career as a Songwriter and touring Musician
-        </BioSection>
-        <BioSection>
-          <BioYear>2020</BioYear>
-          Began studying Software Engineering
-        </BioSection>
-        <BioSection>
-          <BioYear>2021 to present</BioYear>
-          Working as a Software Engineer
-        </BioSection>
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ♥
-        </Heading>
-          Cinema, Music, Photography, Markets, Languages, Songwriting, Playing Piano and Guitar
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          Skills
-        </Heading>
-        Agile Processes · Test Driven Development <br></br>
-        CI/CD Pipeline and DevOps <br></br>
-        Project Planning: user stories, database structure and relationships, mock-ups <br></br>
-        Team Processes: pairing, mobbing, retros, check-ins <br></br>
-        Solid commitment to industry-standard best practices ensuring clean, 
-        efficient, readable code <br></br> (Single Responsibility, DRY) <br></br>
-        Domain Modelling
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          Technologies
-        </Heading>
-          Scala · Java · JavaScript · TypeScript · HTML · CSS <br></br>
-          Play · Spring <br></br>
-          Kubernetes · Jenkins · Docker · PostgreSQL · Mongo <br></br>
-          Mockito · ScalaMock · JUnit · <br></br>
-          SBT · Maven · Gradle <br></br>
-          IntelliJ IDEA · NVIM · VSCode · <br></br>
-          Git · Gitlab <br></br>
-      </Section>
-
-      <Section>
-        <Box align="center" my={4}>
+    <section className="hero">
+      <div>
+        <p className="kicker">
+          Software · Music <span className="jp">ソフトウェア・音楽</span>
+        </p>
+        <h1>
+          <span>Michael</span>
+          <span>
+            Groves<em className="dot" aria-hidden="true">.</em>
+          </span>
+        </h1>
+        <p className="lede">
+          Application engineer for systems that cannot quietly fail. A decade of writing
+          songs, then Java and Scala services for UK government.
+        </p>
+      </div>
+      <div className="hero-side">
+        <span className="tategaki" aria-hidden="true">
+          ソフトウェアエンジニア
+        </span>
+        <figure className="portrait">
           <Image
-            src="/images/ckad.png"
-            alt="CKAD Badge"
-            width="100"
-            height="100"
+            src="/images/michael3.jpg"
+            alt="Portrait of Michael Groves"
+            width={190}
+            height={235}
           />
-        </Box>
-      </Section>
+          <figcaption>
+            <span>England, 1990</span>
+            <em>→ JP</em>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-    </Container>
+    <div className="hero-meta">
+      <span>
+        <strong>Currently</strong> Scala · Java · Kubernetes
+      </span>
+      <span>CKAD certified</span>
+      <span className="accent">Open to work in Japan</span>
+    </div>
+
+    <section className="section" id="about">
+      <SectionHead title="About" index="01" jp="自己紹介" />
+      <div className="split">
+        <dl className="fact-list">
+          <div>
+            <dt>Born</dt>
+            <dd>London, England</dd>
+          </div>
+          <div>
+            <dt>Music</dt>
+            <dd>Songwriter and touring musician, 2010 —</dd>
+          </div>
+          <div>
+            <dt>Software</dt>
+            <dd>Engineer since 2020, Capgemini since 2021</dd>
+          </div>
+          <div>
+            <dt>Next</dt>
+            <dd>Engineering work in Japan</dd>
+          </div>
+        </dl>
+        <div className="prose">
+          <p>
+            With more than four years as a software engineer, I work across object-oriented
+            and functional code, mostly <strong>well-tested microservices, APIs</strong>,
+            and the pipelines that keep them honest.
+          </p>
+          <p>
+            Before that I spent over a decade in music: writing, producing, and playing with
+            other people in rooms that only work if everyone listens. That still shows up in
+            how I pair, mentor, and ship.
+          </p>
+          <a
+            className="ghost"
+            href="https://github.com/michaelgroves90"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub @michaelgroves90
+          </a>
+        </div>
+      </div>
+      <div className="chip-row">
+        {skills.map(skill => (
+          <span className="chip" key={skill}>
+            {skill}
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <section className="section" id="work">
+      <SectionHead title="Selected work" index="02" jp="仕事" />
+      <div className="work-grid">
+        {projects.map(project => (
+          <a className="work-card" key={project.no} href={project.href}>
+            <span className="work-no">{project.no}</span>
+            <span className="work-title">{project.title}</span>
+            <p>{project.blurb}</p>
+            <span className="work-meta">{project.meta}</span>
+          </a>
+        ))}
+      </div>
+    </section>
   </Layout>
 )
 
 export default Home
-export { getServerSideProps } from '../components/chakra'
