@@ -438,6 +438,10 @@ img {
   border-left: 1px solid var(--line);
 }
 
+.work-card:only-child {
+  grid-column: 1 / -1;
+}
+
 .work-card {
   display: flex;
   flex-direction: column;
